@@ -5,6 +5,9 @@
 
 body {
     font-family: 'Nunito-reg';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {

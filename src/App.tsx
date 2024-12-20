@@ -6,7 +6,7 @@ import AllBeers from './pages/allBeers/AllBeers'
 import BeerDetails from './pages/beerDetails/BeerDetails'
 import { useEffect, useState } from 'react'
 import IBeers from './interfaces/IBeers'
-import { getAllBeer } from './components/fetch/Fetch'
+import { getAllBeer } from './components/fetches/Fetches'
 
 function App() {
 

@@ -3,20 +3,22 @@ import backButton from "../../../public/images/Back.png"
 import ProstToHome from "../../components/prostToHome/ProstToHome";
 import IBeerDetailsProps from "../../interfaces/IBeerDetailsProps";
 import { useEffect } from "react";
-import { getBeer } from "../../components/fetch/Fetch";
+import { getBeer } from "../../components/fetches/Fetches";
 import "./BeerDetails.css";
+import Loader from "../../components/loader/Loader";
 
 const BeerDetails: React.FC<IBeerDetailsProps> = ({ singleBeer, setSingleBeer }) => {
 
     const { beerID } = useParams();
     
     useEffect(() => {
+        setSingleBeer(null);
         getBeer(setSingleBeer, beerID);
     }, [beerID, setSingleBeer])
-
+    
     const navigate = useNavigate();
-
-    if (!singleBeer) return <p>Loading...</p>
+    
+    if (!singleBeer) return <Loader />
     return ( 
         <>
             <section className="beer__details">
