@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Nunito-reg';
+    src: url('./assets/fonts/static/Nunito-Regular.ttf');
+}
+
+body {
+    font-family: 'Nunito-reg';
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
